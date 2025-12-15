@@ -236,3 +236,48 @@ if (valid) {
 
 console.log("Password:", password);
 console.log("Valid:", valid);
+
+
+// Answer16
+
+var university = "University of Karachi";
+
+var arr = university.split("");
+
+console.log(arr);
+
+var output = "";
+
+for (var i = 0; i < arr.length; i++) {
+    output += arr[i] + "\n";
+}
+
+// alert(output);
+
+// Answer17
+
+var userInput = prompt("Enter any text:");
+
+var lastChar = userInput.charAt(userInput.length - 1);
+
+console.log("Last character:", lastChar);
+
+alert("Last character is: " + lastChar);
+
+// Answer18
+
+var text = "The quick brown the the the THE fox jumps over the lazy dog";
+
+var lowerText = text.toLowerCase();
+var words = lowerText.split(" ");
+
+var count = 0;
+
+for (var i = 0; i < words.length; i++) {
+    if (words[i] === "the") {
+        count++;
+    }
+}
+
+console.log("Occurrences of 'the':", count);
+alert("Occurrences of 'the': " + count)
