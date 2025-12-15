@@ -87,3 +87,47 @@ console.log(newMessage);
 
 alert(newMessage);
 
+
+// Answer9
+
+var str = "472";
+
+var num = Number(str);
+
+console.log("Value as string:", str);
+console.log("Type:", typeof str);
+
+console.log("Value as number:", num);
+console.log("Type:", typeof num);
+
+alert("String value: " + str + " (type = " + typeof str + ")" +
+    "\nNumber value: " + num + " (type = " + typeof num + ")");
+
+// Answer10
+
+var userInput = prompt("Enter any text:");
+
+var upperCase = userInput.toUpperCase();
+
+console.log("Original Input: " + userInput);
+console.log("In Capital Letters: " + upperCase);
+
+alert("In Capital Letters: " + upperCase);
+
+// Answer11
+
+var userInput = prompt("Enter any text:");
+
+var words = userInput.split(" ");
+
+for (var i = 0; i < words.length; i++) {
+    words[i] = words[i].charAt(0).toUpperCase() + 
+               words[i].slice(1).toLowerCase();
+}
+
+var titleCase = words.join(" ");
+
+console.log("Original Input: " + userInput);
+console.log("Title Case: " + titleCase);
+
+alert("Title Case: " + titleCase);
