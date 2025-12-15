@@ -121,8 +121,8 @@ var userInput = prompt("Enter any text:");
 var words = userInput.split(" ");
 
 for (var i = 0; i < words.length; i++) {
-    words[i] = words[i].charAt(0).toUpperCase() + 
-               words[i].slice(1).toLowerCase();
+    words[i] = words[i].charAt(0).toUpperCase() +
+        words[i].slice(1).toLowerCase();
 }
 
 var titleCase = words.join(" ");
@@ -131,3 +131,108 @@ console.log("Original Input: " + userInput);
 console.log("Title Case: " + titleCase);
 
 alert("Title Case: " + titleCase);
+
+
+// Answer12
+
+var num = 35.36;
+
+var str = num.toString();
+var result = str.replace(".", "");
+
+console.log("Original number:", num);
+console.log("After removing dot:", result);
+
+alert(result);
+
+// Answer13
+
+var username = prompt("Enter your username:");
+
+var isValid = true;
+
+for (var i = 0; i < username.length; i++) {
+
+    var code = username.charCodeAt(i);
+
+    if (code === 64 || code === 46 || code === 44 || code === 33) {
+        isValid = false;
+        break;
+    }
+}
+
+if (isValid) {
+    alert("Username stored successfully: " + username);
+} else {
+    alert("Please enter a valid username without special symbols (@ . , !)");
+}
+
+// Answer14
+
+var A = ["cake", "apple pie", "cookie", "chips", "patties"];
+
+var userInput = prompt("Enter item to search:");
+
+var searchItem = userInput.toLowerCase();
+
+var isFound = false;
+
+for (var i = 0; i < A.length; i++) {
+
+    if (A[i].toLowerCase() === searchItem) {
+        isFound = true;
+        break;
+    }
+}
+
+if (isFound) {
+    alert("Yes, \"" + userInput + "\" is available in the list.");
+} else {
+    alert("Sorry, \"" + userInput + "\" is not available in the list.");
+}
+
+console.log("User searched:", userInput);
+console.log("Found:", isFound);
+
+// Answer15
+
+var password = prompt("Enter your password:");
+var valid = true;
+
+var hasLetter = false;
+var hasNumber = false;
+
+if (password.length < 6) {
+    valid = false;
+}
+
+var firstCode = password.charCodeAt(0);
+if (firstCode >= 48 && firstCode <= 57) {
+    valid = false;
+}
+
+for (var i = 0; i < password.length; i++) {
+
+    var code = password.charCodeAt(i);
+
+    if ((code >= 65 && code <= 90) || (code >= 97 && code <= 122)) {
+        hasLetter = true;
+    }
+
+    if (code >= 48 && code <= 57) {
+        hasNumber = true;
+    }
+}
+
+if (!hasLetter || !hasNumber) {
+    valid = false;
+}
+
+if (valid) {
+    alert("Password accepted!");
+} else {
+    alert("Invalid password! Please enter a valid password.");
+}
+
+console.log("Password:", password);
+console.log("Valid:", valid);
