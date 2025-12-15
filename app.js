@@ -48,3 +48,42 @@ var result = word.charAt(3);
 
 alert("Character at index 3 is: " + result);
 console.log("Character at index 3 is: " + result);
+
+// Answer6
+
+var firstName = prompt("Enter your first name:");
+var lastName = prompt("Enter your last name:");
+
+firstName = firstName.charAt(0).toUpperCase().concat(firstName.slice(1).toLowerCase());
+lastName = lastName.charAt(0).toUpperCase().concat(lastName.slice(1).toLowerCase());
+
+var fullName = firstName.concat(" ", lastName);
+
+alert("Hello " + fullName);
+console.log("Hello " + fullName);
+
+// Answer7
+
+var word = "Hyderabad";
+
+var newWord = word.replace("Hyder", "Islam");
+
+console.log("Original word: " + word);
+console.log("After replacement: " + newWord);
+
+alert("After replacement: " + newWord);
+
+// Answer8
+
+var message = "Ali and Sami are best friends. They play cricket and football together.";
+
+var newMessage = message.replaceAll("and", "&");
+
+console.log("Original message:");
+console.log(message);
+
+console.log("Updated message:");
+console.log(newMessage);
+
+alert(newMessage);
+
